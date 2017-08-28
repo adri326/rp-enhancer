@@ -50,7 +50,12 @@ module.exports = function main(msg) {
         var embed = {
           title: action.disp
             .replace("{{author}}", author)
-            .replace("{{target}}", treated.target)
+            .replace("{{target}}", treated.target),
+        };
+        if ((action.pics || []).length != 0) {
+          embed.image = {
+            url: action.pics[Math.floor(Math.random()*action.pics.length)]
+          };
         }
         msg.channel.send({embed: embed});
       }
