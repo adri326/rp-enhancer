@@ -1,0 +1,9 @@
+{
+  "pat": {
+    "match": "pats?",
+    "disp": "{{author}} pats {{target}}",
+    "pics": [
+      
+    ]
+  }
+}
