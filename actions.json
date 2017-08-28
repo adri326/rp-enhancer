@@ -2,8 +2,51 @@
   "pat": {
     "match": "pats?",
     "disp": "{{author}} pats {{target}}",
+    "target_required": true,
     "pics": [
-      "https://68.media.tumblr.com/71d93048022df065a1d2af96ab71afa3/tumblr_olykrec0DB1qbvovho1_540.gif"
+      "https://68.media.tumblr.com/71d93048022df065a1d2af96ab71afa3/tumblr_olykrec0DB1qbvovho1_540.gif",
+      "https://68.media.tumblr.com/f95f14437809dfec8057b2bd525e6b4a/tumblr_omvkl2SzeK1ql0375o1_540.gif",
+      "https://68.media.tumblr.com/cc0451847fa08b202f4bd7a1cb9bd327/tumblr_o2js2xhINq1tydz8to1_540.gif"
+    ],
+    "sources": [
+      "http://lilium.tumblr.com/post/157714340510",
+      "http://level-upper.tumblr.com/post/158448792121/kobayashi-san-chi-no-maid-dragon-episode-10",
+      "http://nyanpasuminasan.tumblr.com/"
+    ]
+  },
+  "kiss": {
+    "match": "kiss(?:es)?",
+    "disp": "{{author}} kisses {{target}}",
+    "target_required": true,
+    "pics": [
+      "https://68.media.tumblr.com/07ef3c6c688f1160681a8a004e1a2708/tumblr_onq159pW1L1u3p759o1_500.gif",
+      "https://68.media.tumblr.com/f34ce60eb214de0197516261224179ab/tumblr_onq159pW1L1u3p759o3_500.gif",
+      "https://68.media.tumblr.com/1cc64a988185d66a16150fa5b8f1a9aa/tumblr_onq159pW1L1u3p759o5_500.gif"
+    ],
+    "sources": [
+      "https://anime-shojo.tumblr.com/post/159067029380"
+    ]
+  },
+  "lick": {
+    "match": "licks?",
+    "disp": "{{author}} licks {{target}}",
+    "target_required": true,
+    "pics": [
+      "https://media.giphy.com/media/RQ7jEZTiuNRV6/giphy.gif"
+    ],
+    "sources": [
+      "https://giphy.com/gifs/cat-cute-nice-RQ7jEZTiuNRV6"
+    ]
+  },
+  "hug": {
+    "match": "hugs?",
+    "disp": "{{author}} hugs {{target}}",
+    "target_required": true,
+    "pics": [
+      "https://68.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_540.gif"
+    ],
+    "sources": [
+      "http://yuri-pics.tumblr.com/post/157599546983"
     ]
   }
 }
