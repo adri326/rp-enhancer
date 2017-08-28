@@ -1,0 +1,10 @@
+{
+  "name": "rp-enhancer",
+  "description": "A discord bot that uses some basic role-play syntax to trigger nice features",
+  "keywords": ["discord", "discord.js", "bot", "rpg"],
+  "version": "0.1",
+  "main": "main",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
