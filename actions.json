@@ -43,10 +43,50 @@
     "disp": "{{author}} hugs {{target}}",
     "target_required": true,
     "pics": [
-      "https://68.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_540.gif"
+      "https://68.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_540.gif",
+      "https://68.media.tumblr.com/443c4235cae34242d014e2bb1276810d/tumblr_orldmdZJ2x1vb10byo1_500.gif",
+      "https://68.media.tumblr.com/6ef60a705f8961196698f1ae06e488a1/tumblr_ouf53jRIpf1vb10byo1_500.gif",
+      "https://68.media.tumblr.com/5cffe47c3602bc79339473765a39e9cf/tumblr_oqxm6cOkN11vb10byo1_500.gif"
     ],
     "sources": [
-      "http://yuri-pics.tumblr.com/post/157599546983"
+      "http://yuri-pics.tumblr.com/post/157599546983",
+      "http://otakudeliveryservice.tumblr.com/post/162134397543",
+      "http://otakudeliveryservice.tumblr.com/post/164262874410",
+      "http://otakudeliveryservice.tumblr.com/post/161592508471"
+    ]
+  },
+  "hug_no_target": {
+    "match": "hugs?",
+    "disp": "{{author}} hugs {{last}}",
+    "target_required": false,
+    "parent": "hug"
+  },
+  "boop": {
+    "match": "boops?",
+    "disp": "{{author}} boops {{target}}",
+    "target_required": true,
+    "pics": [
+      "http://68.media.tumblr.com/ade02431665ed0eade3f9af182f46320/tumblr_ojg0fyEXYd1t0t8rjo1_500.png"
+    ],
+    "sources": [
+      "http://otakudeliveryservice.tumblr.com/post/156119746841/akeemi-art-boop"
+    ]
+  },
+  "cuddle": {
+    "match": "cuddles?",
+    "disp": "{{author}} cuddles {{target}}",
+    "target_required": true,
+    "pics": [
+      "https://68.media.tumblr.com/0d75f3afd87a29cd4566598dfa8ff625/tumblr_okrw1cOUfT1w4hkclo1_540.gif",
+      "https://68.media.tumblr.com/5c0b0f3adab51474476b712c1bcc7b9e/tumblr_nxietzZELM1u32h4qo1_500.gif",
+      "https://68.media.tumblr.com/a3325f075a2d6041a60c200da5633cce/tumblr_niiqsac5pw1tvuu8no1_400.gif",
+      "https://68.media.tumblr.com/e6c55aff29b946533d9c553cedb84b69/tumblr_odwsl282tf1vgzj5xo1_540.jpg"
+    ],
+    "sources": [
+      "https://if-imthedevil.tumblr.com/post/156735713142/i-wish",
+      "http://hopefulhurricane.tumblr.com/post/132813323952",
+      "http://thewandererguy.tumblr.com/post/108722120992/if-it-isnt-evident-yet-i-need-cuddles",
+      "http://helloimrandom.tumblr.com/post/151262859185/im-adding-this-to-queue-on-22092016-i-wonder"
     ]
   }
 }

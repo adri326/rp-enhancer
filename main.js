@@ -2,6 +2,7 @@ const log = require("./log");
 const Discord = require("discord.js");
 const fs = require("fs");
 const treat = require("./treat");
+discordadmins = require("./package.json")._discordadmins;
 
 log("DONE", "loading modules");
 log("START", "loading actions");
