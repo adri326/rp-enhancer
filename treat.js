@@ -123,6 +123,18 @@ module.exports = function main(msg) {
         url: "https://discordapp.com/oauth2/authorize?&client_id=" + bot.user.id + "&scope=bot&permissions=0"
       }});
     }
+    if (commands[0] == "help") {
+      msg.channel.send({embed: {
+        title: "Help",
+        description: "This bot has very few commands, but a pretty human-language interpretor",
+        fields: [
+          {name: "Introduction", value: "This bot uses the Role Play syntax. This syntax has asterisks `\*` around the action. The action is a verb and its target."},
+          {name: "Example", value: "`\*hug @sha_dryx\*` Means that you hug the user **@sha_dryx**"},
+          {name: "Now, what?", value: "After you send a message with this syntax, the bot will - if he knows the action you asked him - trigger a message with an image (usually an animated gif), picturing this particular action"},
+          {name: "Commands", value: "This bot has two commands, `rp!invite`, which allows you to add this bot on your very own server and `rp!help`, which will trigger this message"}
+        ]
+      }});
+    }
     if (commands[0] == "admin") {
       if (discordadmins.indexOf(msg.author.id) != -1) {
         if (commands[1] == "reload") {
@@ -139,7 +151,7 @@ module.exports = function main(msg) {
         }
         if (commands[1] == "edit") {
           if (commands[2] == undefined) {
-            msg.channel.send("```" + Object.keys(actions).toString().replace(/[\[\]\, ]/, "") + "```");
+            msg.channel.send("```" + Object.keys(actions).toString().replace(/[\[\] ]/g, "").replace(/,/g, ", ") + "```");
           }
           else {
             if (commands[3] == undefined) {
@@ -175,6 +187,10 @@ module.exports = function main(msg) {
                   else if (commands[4] == "splice") {
                     msg.channel.send("Spliced out `" + actions[commands[2]][commands[3]].splice(~~commands[5], 1)[0] + "`");
                   }
+                  else if (commands[4] == "init") {
+                    actions[commands[2]][commands[3]] = [];
+                    msg.channel.send("Initialised property `" + commands[3] + "`");
+                  }
                 }
                 else {
                   msg.channel.send("Property not found!");
@@ -192,7 +208,11 @@ module.exports = function main(msg) {
         }
         if (commands[1] == "save") {
           fs.writeFileSync("./actions.json", CircularJSON.stringify(actions));
+          msg.channel.send("Saved!");
         }
+      }
+      else {
+        msg.channel.send("**YARR NOT AUTHORISED!!**");
       }
     }
   }
