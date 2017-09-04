@@ -191,7 +191,7 @@ module.exports = function main(msg) {
           msg.channel.send("Added " + commands[2]);
         }
         if (commands[1] == "save") {
-          fs.writeFileSync("./treat.js", CircularJSON.stringify(actions));
+          fs.writeFileSync("./actions.json", CircularJSON.stringify(actions));
         }
       }
     }
