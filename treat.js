@@ -114,6 +114,7 @@ module.exports = function main(msg) {
     }
   }
   else if (msg.content.startsWith("rp!")) {
+    console.log(msg.author.username + ":" + msg.author.discriminator + "  " + msg.content);
     var commands = split_args(msg.content.slice(3));
     if (commands[0] == "invite") {
       msg.channel.send({embed: {
@@ -131,9 +132,18 @@ module.exports = function main(msg) {
           {name: "Introduction", value: "This bot uses the Role Play syntax. This syntax has asterisks `\*` around the action. The action is a verb and its target."},
           {name: "Example", value: "`\*hug @sha_dryx\*` Means that you hug the user **@sha_dryx**"},
           {name: "Now, what?", value: "After you send a message with this syntax, the bot will - if he knows the action you asked him - trigger a message with an image (usually an animated gif), picturing this particular action"},
-          {name: "Commands", value: "This bot has two commands, `rp!invite`, which allows you to add this bot on your very own server and `rp!help`, which will trigger this message"}
+          {name: "Commands", value: "This bot has three commands, `rp!invite`, which allows you to add this bot on your very own server, `rp!help`, which will trigger this message and `rp!list`, which lists all the available actions"}
         ]
       }});
+    }
+    if (commands[0] == "list") {
+      let string = "";
+      Object.keys(actions).forEach(action => {
+        if (actions[action].visible === true) {
+          string = string + "\r\n * " + action;
+        }
+      });
+      msg.channel.send("Actions list: ```md" + string + "```");
     }
     if (commands[0] == "admin") {
       if (discordadmins.indexOf(msg.author.id) != -1) {
@@ -146,7 +156,7 @@ module.exports = function main(msg) {
             msg.channel.send("```" + (treat(commands[2]) || "Group did not matched") + "```");
           }
           else {
-            msg.channel.send("```" + gen_treat_regex().toString() + "```");
+            msg.channel.send("```" + CircularJSON.stringify(gen_treat_regex()) + "```");
           }
         }
         if (commands[1] == "edit") {
@@ -164,7 +174,7 @@ module.exports = function main(msg) {
             }
             else {
               if (actions[commands[2]] != undefined) {
-                if (["match", "disp", "target_required", "parent"].indexOf(commands[3]) > -1) {
+                if (["match", "disp", "target_required", "parent", "visible"].indexOf(commands[3]) > -1) {
                   if (commands[4] == "true") {
                     actions[commands[2]][commands[3]] = true;
                   }
@@ -209,6 +219,17 @@ module.exports = function main(msg) {
         if (commands[1] == "save") {
           fs.writeFileSync("./actions.json", CircularJSON.stringify(actions));
           msg.channel.send("Saved!");
+        }
+        if (commands[1] == "info") {
+          msg.channel.send({embed: {
+            title: "Info",
+            fields: [
+              {name: "Guilds", value: bot.guilds.size + " guilds"},
+              {name: "Ram usage", value: Math.round(process.memoryUsage().heapTotal/1024/1024*10)/10 + " MB"},
+              {name: "Available actions", value: Object.keys(actions).length + " actions"},
+              {name: "Average ping", value: Math.round(bot.ping*10)/10 + " ms"}
+            ]
+          }});
         }
       }
       else {
