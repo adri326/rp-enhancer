@@ -26,13 +26,6 @@ bot.on("ready", () => {
 
 bot.on("message", treat);
 
-function playing() {
-  bot.user.setGame("on " + bot.guilds.size + " servers!")
-    .then((user) => {})
-    .catch(console.error);
-}
-
-setInterval(playing, 30000);
 bot.on("ready", () => {
-  playing();
+  bot.user.setPresence({game: {name: "rp!help"}});
 });
