@@ -29,7 +29,7 @@ function gen_treat_regex() {
   });
   actions_selector = "(" + action_selector.slice(0, action_selector.length - 1) + ")";
   var kinky_discarder = "(?:[\\~ ❤]*)"
-  var full_string = "^ *" + start_selector + actions_selector + " *(" + player_selector + ")?" + kinky_discarder + "$";
+  var full_string = "^ *" + actions_selector + " *(" + player_selector + ")?" + kinky_discarder + "$";
   //console.log(full_string);
   return new RegExp(full_string, "i");
 }
@@ -145,6 +145,52 @@ module.exports = function main(msg) {
       });
       msg.channel.send("Actions list: ```md" + string + "```");
     }
+    if (commands[0] == "info") {
+      let embed = {
+        author: {
+          name: bot.user.username,
+          icon_url: bot.user.avatarURL
+        },
+        description: "A gif-triggering bot that tries to interpret roleplay-based messages",
+        fields: []
+      };
+      let promises = [];
+
+      let message;
+      promises.push(msg.channel.send("`Give me a second...`").then(_msg => {
+        message = _msg;
+      }));
+
+      function users() {
+        return bot.guilds.array().map(guild => {
+          return guild.members.size;
+        }).reduce((a, b) => {return a + b;});
+      }
+
+      embed.fields.push({name: "Author", value: "Adrien Burgun (sha_dryx)", inline: true});
+      embed.fields.push({name: "Links", value: "[Repository](https://github.com/adri326/rp-enhancer/)\n[Twitter](https://twitter.com/Sha_Dryx)\n[Report an issue](https://github.com/adri326/rp-enhancer/issues)", inline: true});
+      embed.fields.push({name: "Available actions", value: Object.keys(actions)
+        .map(name => {return actions[name]})
+        .filter(action => {
+          return action.visible || false;
+        }).length + " actions", inline: true});
+      embed.fields.push({name: "Guilds", value: bot.guilds.size + " guilds", inline: true});
+      embed.fields.push({name: "Users", value: users() + " users\n(" + bot.users.size + " unique)", inline: true});
+      embed.fields.push({name: "Ping", value: Math.round(bot.ping*10)/10 + " ms", inline: true});
+
+      promises.push(bot.fetchUser(owner).then(user => {
+        embed.footer = {
+          text: "sha_dryx",
+          icon_url: user.avatarURL
+        }
+      }).catch(console.error));
+
+
+
+      Promise.all(promises).then(_ => {
+        message.edit({embed: embed});
+      });
+    }
     if (commands[0] == "admin") {
       if (discordadmins.indexOf(msg.author.id) != -1) {
         if (commands[1] == "reload") {
@@ -156,7 +202,7 @@ module.exports = function main(msg) {
             msg.channel.send("```" + (treat(commands[2]) || "Group did not matched") + "```");
           }
           else {
-            msg.channel.send("```" + CircularJSON.stringify(gen_treat_regex()) + "```");
+            msg.channel.send("```" + gen_treat_regex().toString() + "```");
           }
         }
         if (commands[1] == "edit") {

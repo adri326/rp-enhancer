@@ -14,6 +14,8 @@ log("START", "loading secret");
 
 const secret = JSON.parse(fs.readFileSync("./secret.json"));
 
+owner = secret.owner;
+
 log("DONE", "loading secret");
 log("START", "logging in");
 
