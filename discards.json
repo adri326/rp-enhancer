@@ -1,0 +1,5 @@
+[
+  {"match": "(\\w+) *back$", "disp": "$1"},
+  {"match": "^@everyone$", "disp": "everyone"},
+  {"match": "^@here$", "disp": "everyone"}
+]

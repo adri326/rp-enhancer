@@ -4,11 +4,15 @@ const CircularJSON = require("circular-json");
 function treat(string) {
   var raw = gen_treat_regex().exec(string);
   if (raw !== null) {
-    //console.log(raw[2] + " " + (player || player_raw).toString())
+    let target = (raw[2] || "").trim();
+
+    discards.forEach(discard => {
+      target = target.replace(new RegExp(discard.match), discard.disp);
+    });
+
     return {
-      action: raw[3],
-      target: raw[2] || raw[4] || "",
-      author: raw[1]
+      action: raw[1].trim(),
+      target
     };
   }
   else {
@@ -17,7 +21,7 @@ function treat(string) {
 }
 
 function gen_treat_regex() {
-  var player_selector = "(?:(?:[\\w_\\-]* ?)|(?:\\<@\\!?\\d{18}\\> ?))+";
+  var player_selector = "(?:(?:@?[\\w_\\-]* ?)|(?:\\<@\\!?\\d{18}\\> ?))+";
   var start_author_selector = "(?:(" + player_selector + ") +[\\-=]\\> )"
   var start_name_selector = "(?:[\\-=]\\> *(" + player_selector + ") )";
   var start_selector = "(?:" + start_author_selector + "|" + start_name_selector + ")?"
@@ -28,7 +32,7 @@ function gen_treat_regex() {
     }
   });
   actions_selector = "(" + action_selector.slice(0, action_selector.length - 1) + ")";
-  var kinky_discarder = "(?:[\\~ ❤]*)"
+  var kinky_discarder = "(?:[\\~ ❤]*)";
   var full_string = "^ *" + actions_selector + " *(" + player_selector + ")?" + kinky_discarder + "$";
   //console.log(full_string);
   return new RegExp(full_string, "i");
@@ -91,10 +95,10 @@ module.exports = function main(msg) {
     console.log(msg.author.username + ":" + msg.author.discriminator + "  " + msg.content);
     var treated = treat(msg.content.split(/\*/g)[1]);
     if (treated !== null) {
-      var action = find_matching_action(treated.action, treated.target != "");
+      var action = find_matching_action(treated.action, treated.target != "" && treated.target);
       treated.last_author = "you";
       if (action !== null) {
-        if (action.disp.indexOf("{{last}}") != -1) {
+        if (action.disp.indexOf("{{last}}") != -1 || treated.target == "you") {
           msg.channel.fetchMessages({limit: 10})
             .then(messages => {
               var found = messages.find(message => message.author.id != msg.author.id && message.author.id != bot.user.id);
@@ -132,7 +136,7 @@ module.exports = function main(msg) {
           {name: "Introduction", value: "This bot uses the Role Play syntax. This syntax has asterisks `\*` around the action. The action is a verb and its target."},
           {name: "Example", value: "`\*hug @sha_dryx\*` Means that you hug the user **@sha_dryx**"},
           {name: "Now, what?", value: "After you send a message with this syntax, the bot will - if he knows the action you asked him - trigger a message with an image (usually an animated gif), picturing this particular action"},
-          {name: "Commands", value: "This bot has three commands, `rp!invite`, which allows you to add this bot on your very own server, `rp!help`, which will trigger this message and `rp!list`, which lists all the available actions"}
+          {name: "Commands", value: "This bot has four commands:\n- `rp!invite`, which allows you to add this bot on your very own server\n- `rp!help`, which will trigger this message\n- `rp!list`, which lists all the available actions\n- `rp!info`, a command that gives you some informations about the bot and useful links"}
         ]
       }});
     }
@@ -199,7 +203,7 @@ module.exports = function main(msg) {
         }
         if (commands[1] == "match") {
           if (commands[2] != undefined) {
-            msg.channel.send("```" + (treat(commands[2]) || "Group did not matched") + "```");
+            msg.channel.send("```" + (CircularJSON.stringify(treat(commands[2])) || "Group did not matched") + "```");
           }
           else {
             msg.channel.send("```" + gen_treat_regex().toString() + "```");
@@ -258,13 +262,35 @@ module.exports = function main(msg) {
             }
           }
         }
+        if (commands[1] == "discards") {
+          if (commands[2] == undefined) {
+            let string = "";
+            discards.forEach(discard => {
+              string += "\n* \"" + discard.match + "\": \"" + discard.disp + "\"";
+            });
+            msg.channel.send("```md" + string + "```");
+          }
+          if (commands[2] == "push") {
+            discards.push({match: commands[3], disp: commands[4]});
+            msg.channel.send("Pushed `\"" + commands[3] + "\": \"" + commands[4] + "\"`");
+          }
+          else if (commands[2] == "pop") {
+            msg.channel.send("Popped `" + discards.pop() + "`");
+          }
+          else if (commands[2] == "splice") {
+            msg.channel.send("Spliced out `" + discards.splice(~~commands[3], 1)[0] + "`");
+          }
+        }
         if (commands[1] == "add") {
           actions[commands[2]] = {};
           msg.channel.send("Added " + commands[2]);
         }
         if (commands[1] == "save") {
-          fs.writeFileSync("./actions.json", CircularJSON.stringify(actions));
-          msg.channel.send("Saved!");
+          msg.channel.send("Saving...").then(_msg => {
+            fs.writeFileSync("./actions.json", CircularJSON.stringify(actions));
+            fs.writeFileSync("./discards.json", CircularJSON.stringify(discards));
+            _msg.edit("Saved!");
+          }).catch(console.error);
         }
         if (commands[1] == "info") {
           msg.channel.send({embed: {
@@ -290,7 +316,7 @@ function second(msg, action, treated) {
   var embed = {
     title: action.disp
       .replace("{{author}}", author)
-      .replace("{{target}}", get_nickname(treated.target.replace(/^\<@/, "").replace(/^!/, "").replace(">", ""), msg.guild))
+      .replace("{{target}}", get_nickname(treated.target.replace(/^\<@/, "").replace(/^!/, "").replace(">", "").replace("you", treated.last_author), msg.guild))
       .replace("{{last}}", treated.last_author),
     color: (msg.guild.member(msg.author) || {displayColor: 13477874}).displayColor
   };

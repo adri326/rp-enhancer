@@ -5,11 +5,12 @@ const treat = require("./treat");
 discordadmins = require("./package.json")._discordadmins;
 
 log("DONE", "loading modules");
-log("START", "loading actions");
+log("START", "loading saves");
 
-actions = JSON.parse(fs.readFileSync("./actions.json"));
+actions = require("./actions.json");
+discards = require("./discards.json");
 
-log("DONE", "loading actions");
+log("DONE", "loading saves");
 log("START", "loading secret");
 
 const secret = JSON.parse(fs.readFileSync("./secret.json"));
