@@ -93,7 +93,7 @@ module.exports = function main(msg) {
   // Checks if there is two or more "*" or "**" in the message's content
   if ((msg.content.match(/\*+/g) || []).length == 2) {
     console.log(msg.author.username + ":" + msg.author.discriminator + "  " + msg.content);
-    var treated = treat(msg.content.split(/\*/g)[1]);
+    var treated = treat(msg.content.split(/\*+/g)[1]);
     if (treated !== null) {
       var action = find_matching_action(treated.action, treated.target != "" && treated.target);
       treated.last_author = "you";

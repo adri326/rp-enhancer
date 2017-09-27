@@ -27,7 +27,12 @@ bot.on("ready", () => {
   log("DONE", "logging in");
 });
 
-bot.on("message", treat);
+bot.on("message", msg => {
+  let perms = msg.channel.permissionsFor(bot.user);
+  if (perms.has(Discord.Permissions.FLAGS.SEND_MESSAGES)) {
+    treat(msg);
+  }
+});
 
 bot.on("ready", () => {
   bot.user.setPresence({game: {name: "rp!help"}});
