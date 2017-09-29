@@ -144,7 +144,7 @@ module.exports = function main(msg) {
       let string = "";
       Object.keys(actions).forEach(action => {
         if (actions[action].visible === true) {
-          string = string + "\r\n * " + action;
+          string = string + "\n* " + action;
         }
       });
       msg.channel.send("Actions list: ```md" + string + "```");
