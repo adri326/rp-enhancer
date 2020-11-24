@@ -1,3 +1,5 @@
 node_modules/
-secret.json
 test.js
+data/guilds.json
+data/secret.json
+data/users.json

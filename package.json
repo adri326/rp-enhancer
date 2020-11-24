@@ -1,11 +1,14 @@
 {
-  "name": "rp-enhancer",
-  "description": "A discord bot that uses some basic role-play syntax to trigger nice features",
-  "keywords": ["discord", "discord.js", "bot", "rpg"],
-  "version": "0.1",
-  "main": "main",
-  "dependencies": {
-    "discord.js": "^11.1.0"
+  "name": "rp-enhancer-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "_discordadmins": ["238841636581277698", "108319941949693952"]
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eris": "^0.8.6"
+  }
 }

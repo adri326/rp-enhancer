@@ -1,0 +1,398 @@
+{
+ "pat": {
+  "match": "pats?(?:\\s*pats?)?",
+  "disp": "{{author}} pats {{target}}",
+  "target_required": true,
+  "pics": [
+   "https://68.media.tumblr.com/71d93048022df065a1d2af96ab71afa3/tumblr_olykrec0DB1qbvovho1_540.gif",
+   "https://68.media.tumblr.com/f95f14437809dfec8057b2bd525e6b4a/tumblr_omvkl2SzeK1ql0375o1_540.gif",
+   "https://68.media.tumblr.com/cc0451847fa08b202f4bd7a1cb9bd327/tumblr_o2js2xhINq1tydz8to1_540.gif",
+   "http://gifimage.net/wp-content/uploads/2017/07/head-pat-gif-18.gif",
+   "https://i.imgur.com/0e5YFbF.gif"
+  ],
+  "sources": [
+   "http://lilium.tumblr.com/post/157714340510",
+   "http://level-upper.tumblr.com/post/158448792121/kobayashi-san-chi-no-maid-dragon-episode-10",
+   "http://nyanpasuminasan.tumblr.com/"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/71d93048022df065a1d2af96ab71afa3/tumblr_olykrec0DB1qbvovho1_540.gif",
+    "https://68.media.tumblr.com/f95f14437809dfec8057b2bd525e6b4a/tumblr_omvkl2SzeK1ql0375o1_540.gif",
+    "https://68.media.tumblr.com/cc0451847fa08b202f4bd7a1cb9bd327/tumblr_o2js2xhINq1tydz8to1_540.gif",
+    "http://gifimage.net/wp-content/uploads/2017/07/head-pat-gif-18.gif",
+    "https://i.imgur.com/0e5YFbF.gif"
+   ]
+  },
+  "desc": "Pat your friends :3 (`*pat(s)*`)"
+ },
+ "kiss": {
+  "match": "kiss(?:es)?|bisous?",
+  "disp": "{{author}} kisses {{target}}",
+  "target_required": true,
+  "pics": [
+   "https://68.media.tumblr.com/07ef3c6c688f1160681a8a004e1a2708/tumblr_onq159pW1L1u3p759o1_500.gif",
+   "https://68.media.tumblr.com/f34ce60eb214de0197516261224179ab/tumblr_onq159pW1L1u3p759o3_500.gif",
+   "https://68.media.tumblr.com/1cc64a988185d66a16150fa5b8f1a9aa/tumblr_onq159pW1L1u3p759o5_500.gif",
+   "http://i.imgur.com/lvgE35W.gif"
+  ],
+  "sources": [
+   "https://anime-shojo.tumblr.com/post/159067029380"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/07ef3c6c688f1160681a8a004e1a2708/tumblr_onq159pW1L1u3p759o1_500.gif",
+    "https://68.media.tumblr.com/f34ce60eb214de0197516261224179ab/tumblr_onq159pW1L1u3p759o3_500.gif",
+    "https://68.media.tumblr.com/1cc64a988185d66a16150fa5b8f1a9aa/tumblr_onq159pW1L1u3p759o5_500.gif",
+    "http://i.imgur.com/lvgE35W.gif",
+    [
+     "https://cdn.discordapp.com/attachments/465451816662990859/520842806886006794/original_6.gif",
+     "https://tenor.com/view/anww-hug-kiss-anime-cartoon-gif-4874618"
+    ],
+    [
+     "https://cdn.discordapp.com/attachments/465451816662990859/520842806886006794/original_6.gif",
+     "https://tenor.com/view/anww-hug-kiss-anime-cartoon-gif-4874618"
+    ]
+   ]
+  },
+  "desc": "Kiss someone <3 (`*kiss(es)*`)"
+ },
+ "lick": {
+  "match": "licks?",
+  "disp": "{{author}} licks {{target}}",
+  "target_required": true,
+  "pics": [
+   "https://media.giphy.com/media/RQ7jEZTiuNRV6/giphy.gif",
+   "https://media.giphy.com/media/JUrjTvzTbTUME/giphy.gif"
+  ],
+  "sources": [
+   "https://giphy.com/gifs/cat-cute-nice-RQ7jEZTiuNRV6",
+   "https://giphy.com/gifs/cute-dog-JUrjTvzTbTUME"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://media.giphy.com/media/RQ7jEZTiuNRV6/giphy.gif",
+    "https://media.giphy.com/media/JUrjTvzTbTUME/giphy.gif"
+   ]
+  },
+  "desc": "(furry&safe) Lick someone's cheeks :3 (`*lick(s)*`)"
+ },
+ "hug": {
+  "match": "hug[sz]?|c[aâ]ll?[iî]ns?",
+  "disp": "{{author}} hugs {{target}}",
+  "target_required": true,
+  "pics": [
+   "https://68.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_540.gif",
+   "https://68.media.tumblr.com/443c4235cae34242d014e2bb1276810d/tumblr_orldmdZJ2x1vb10byo1_500.gif",
+   "https://68.media.tumblr.com/6ef60a705f8961196698f1ae06e488a1/tumblr_ouf53jRIpf1vb10byo1_500.gif",
+   "https://68.media.tumblr.com/5cffe47c3602bc79339473765a39e9cf/tumblr_oqxm6cOkN11vb10byo1_500.gif",
+   "https://68.media.tumblr.com/ea5712cfbabe5f25f0a0a8fdcafaaf9a/tumblr_ouitks25X91w2sfy3o1_500.jpg",
+   "https://68.media.tumblr.com/1f4ff0497420fa84057c6a5f23903733/tumblr_otqk4d3rmA1wnjzroo1_500.gif",
+   "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
+   "http://i.imgur.com/8ruodNJ.gif",
+   "http://i.imgur.com/Ltmb8aa.gif",
+   "https://68.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_540.gif"
+  ],
+  "sources": [
+   "http://yuri-pics.tumblr.com/post/157599546983",
+   "http://otakudeliveryservice.tumblr.com/post/162134397543",
+   "http://otakudeliveryservice.tumblr.com/post/164262874410",
+   "http://otakudeliveryservice.tumblr.com/post/161592508471",
+   "https://la-ragazza-degli-abbracci.tumblr.com/post/164058934344/hug",
+   "https://kaatsuno.tumblr.com/post/163640757453/onodera-kosaki-kirisaki-chitoge-nisekoi",
+   "https://giphy.com/gifs/happy-hug-od5H3PmEG5EVq",
+   "https://myanimelist.net/featured/1622/Top_20_Best_Anime_Hug_Scenes__Dont_Ever_Let_Go",
+   "Nagi no Asukara",
+   "http://sam2119931.tumblr.com/post/144394468870/give-her-some-of-your-love"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/18fdf4adcb5ad89f5469a91e860f80ba/tumblr_oltayyHynP1sy5k7wo1_540.gif",
+    "https://68.media.tumblr.com/443c4235cae34242d014e2bb1276810d/tumblr_orldmdZJ2x1vb10byo1_500.gif",
+    "https://68.media.tumblr.com/6ef60a705f8961196698f1ae06e488a1/tumblr_ouf53jRIpf1vb10byo1_500.gif",
+    "https://68.media.tumblr.com/5cffe47c3602bc79339473765a39e9cf/tumblr_oqxm6cOkN11vb10byo1_500.gif",
+    "https://68.media.tumblr.com/1f4ff0497420fa84057c6a5f23903733/tumblr_otqk4d3rmA1wnjzroo1_500.gif",
+    "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
+    "http://i.imgur.com/8ruodNJ.gif",
+    "http://i.imgur.com/Ltmb8aa.gif",
+    "https://68.media.tumblr.com/e790af0168cd80394b7d792dde07407b/tumblr_o76qfcMiFn1sk1rjvo1_540.gif"
+   ],
+   "furry": [
+    [
+     "https://static1.e926.net/data/63/ba/63baddbf8099ca46e8ef791025085c81.jpg",
+     "http://ricksketchbook.tumblr.com/post/153664297645/draws-for-10-patrons",
+     "Rick Griffin"
+    ],
+    [
+     "https://static1.e926.net/data/d4/fb/d4fb9db544eeae3bfea3a29ddc2089f9.jpg",
+     "http://e926.net/post/show/1505748/2018-abluedeer-anthro-belt-black_nose-blue_fur-blu",
+     "abluedeer"
+    ],
+    [
+     "https://static1.e926.net/data/66/13/661339e9eaebba1f7f7b2dda0e888d08.jpg",
+     "http://e926.net/post/show/1466520/2017-5_fingers-anthro-beads-bedding-blanket-breast",
+     "heresy"
+    ],
+    [
+     "https://static1.e926.net/data/e5/a7/e5a7844877e4f922b7d9713aa8e12321.png",
+     "http://e926.net/post/show/1455819/anthro-canine-clothed-clothing-couple_-disambiguat",
+     "k-9"
+    ],
+    [
+     "https://static1.e926.net/data/30/3d/303d28efa1cbaada6d09be077636c585.gif",
+     "http://e926.net/post/show/1386620/alpha_channel-animal_humanoid-animated-brown_eyes-",
+     "dav-19"
+    ],
+    "https://media.discordapp.net/attachments/389103217889247235/618951128654020627/ezgif-4-e4242104e93a.gif"
+   ]
+  },
+  "desc": "**Hugs** :D (`*hug(s)*`)"
+ },
+ "hug_no_target": {
+  "match": "hug[sz]?|c[aâ]ll?[iî]ns?",
+  "disp": "{{author}} hugs {{last}}",
+  "target_required": false,
+  "parent": "hug",
+  "sets": {},
+  "desc": ">boop<! :3 (`*boop(s)*`)"
+ },
+ "boop": {
+  "match": "(?:bidi)?bo{2,}p(?:yboop)?s?",
+  "disp": "{{author}} boops {{target}}",
+  "target_required": true,
+  "pics": [
+   "http://68.media.tumblr.com/ade02431665ed0eade3f9af182f46320/tumblr_ojg0fyEXYd1t0t8rjo1_500.png",
+   "https://68.media.tumblr.com/c8f0b15a203bc3218074b59018701c16/tumblr_ojxyc7uLbU1vf4kdzo1_500.gif"
+  ],
+  "sources": [
+   "http://otakudeliveryservice.tumblr.com/post/156119746841/akeemi-art-boop",
+   "http://gifsofgodanime.tumblr.com/post/156004432215/nose-on-nose"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/c8f0b15a203bc3218074b59018701c16/tumblr_ojxyc7uLbU1vf4kdzo1_500.gif"
+   ]
+  },
+  "desc": ">boop<! :3 (`*boop(s)*`)"
+ },
+ "cuddle": {
+  "match": "cuddles?",
+  "disp": "{{author}} cuddles {{target}}",
+  "target_required": true,
+  "pics": [
+   "https://68.media.tumblr.com/0d75f3afd87a29cd4566598dfa8ff625/tumblr_okrw1cOUfT1w4hkclo1_540.gif",
+   "https://68.media.tumblr.com/5c0b0f3adab51474476b712c1bcc7b9e/tumblr_nxietzZELM1u32h4qo1_500.gif",
+   "https://68.media.tumblr.com/a3325f075a2d6041a60c200da5633cce/tumblr_niiqsac5pw1tvuu8no1_400.gif",
+   "https://68.media.tumblr.com/e6c55aff29b946533d9c553cedb84b69/tumblr_odwsl282tf1vgzj5xo1_540.jpg",
+   "https://68.media.tumblr.com/4e438372a528838e6a477b7e3f4daed4/tumblr_oe6eghvnMU1vgzj5xo1_500.jpg"
+  ],
+  "sources": [
+   "https://if-imthedevil.tumblr.com/post/156735713142/i-wish",
+   "http://hopefulhurricane.tumblr.com/post/132813323952",
+   "http://thewandererguy.tumblr.com/post/108722120992/if-it-isnt-evident-yet-i-need-cuddles",
+   "http://helloimrandom.tumblr.com/post/151262859185/im-adding-this-to-queue-on-22092016-i-wonder",
+   "http://helloimrandom.tumblr.com/post/151729435864/catboys-cuddling"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/0d75f3afd87a29cd4566598dfa8ff625/tumblr_okrw1cOUfT1w4hkclo1_540.gif",
+    "https://68.media.tumblr.com/5c0b0f3adab51474476b712c1bcc7b9e/tumblr_nxietzZELM1u32h4qo1_500.gif",
+    "https://68.media.tumblr.com/a3325f075a2d6041a60c200da5633cce/tumblr_niiqsac5pw1tvuu8no1_400.gif"
+   ]
+  },
+  "desc": "~Cuddle~ someone (`*cuddle(s)*`)"
+ },
+ "cuddle_no_target": {
+  "parent": "cuddle",
+  "disp": "{{author}} cuddles {{last}}",
+  "match": "cuddles?",
+  "target_required": false,
+  "sets": {},
+  "desc": ""
+ },
+ "pat_no_target": {
+  "parent": "pat",
+  "target_required": false,
+  "disp": "{{author}} pats {{last}}",
+  "match": "pats?(?:\\s*pats?)?",
+  "sets": {},
+  "desc": ""
+ },
+ "boop_no_target": {
+  "target_required": false,
+  "parent": "boop",
+  "disp": "{{author}} boops {{last}}",
+  "match": "(?:bidi)?bo{2,}p(?:yboop)?s?",
+  "sets": {},
+  "desc": ""
+ },
+ "high_five": {
+  "match": "high[ _\\-]five",
+  "disp": "{{author}}: High-five!",
+  "target_required": -1,
+  "pics": [
+   "https://68.media.tumblr.com/26d6ecf6dbbd41094c62278d7c2d4fb0/tumblr_opuf01uJKk1tx6zqyo1_500.gif"
+  ],
+  "sources": [
+   "http://somenerdthing.tumblr.com/post/160585414185"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/26d6ecf6dbbd41094c62278d7c2d4fb0/tumblr_opuf01uJKk1tx6zqyo1_500.gif"
+   ]
+  },
+  "desc": "High five! (`*high five*`)"
+ },
+ "hide": {
+  "target_required": false,
+  "pics": [
+   "https://media.giphy.com/media/QmborIvT1md6o/giphy.gif",
+   "https://2.bp.blogspot.com/-V-20YSWQYzM/UoTFmL5i2gI/AAAAAAAABxc/cFXYQ2fq2vo/s1600/Hide+001.gif"
+  ],
+  "sources": [
+   "https://giphy.com/gifs/skills-euphonium-notch-QmborIvT1md6o",
+   "https://reactionanime.blogspot.fr/2013/12/hide-gif-reaction-anime.html"
+  ],
+  "disp": "{{author}} hides away",
+  "match": "hides?",
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://media.giphy.com/media/QmborIvT1md6o/giphy.gif",
+    "https://2.bp.blogspot.com/-V-20YSWQYzM/UoTFmL5i2gI/AAAAAAAABxc/cFXYQ2fq2vo/s1600/Hide+001.gif"
+   ]
+  },
+  "desc": "~Hide~ yourself.. sneaky... (`*hide(s)*`)"
+ },
+ "cry": {
+  "pics": [
+   "https://3.bp.blogspot.com/-lz4SPJvIDHo/UsKujLy6_VI/AAAAAAAACFA/u92s7J16gv4/s640/Cry+004.gif",
+   "https://3.bp.blogspot.com/-nhlTg11XTPU/UoTDlhCNCXI/AAAAAAAABwM/x0PXqh8u6_w/s1600/Cry+002.gif"
+  ],
+  "sources": [
+   "https://reactionanime.blogspot.fr/2014/01/cry-gif-reaction-anime_26.html",
+   "https://reactionanime.blogspot.fr/2013/11/cry-gif-reaction-anime_28.html"
+  ],
+  "disp": "{{author}} cries <:SadPandu:327124157391437824>",
+  "match": "cry|cries|pleures?",
+  "target_required": false,
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://3.bp.blogspot.com/-lz4SPJvIDHo/UsKujLy6_VI/AAAAAAAACFA/u92s7J16gv4/s640/Cry+004.gif",
+    "https://3.bp.blogspot.com/-nhlTg11XTPU/UoTDlhCNCXI/AAAAAAAABwM/x0PXqh8u6_w/s1600/Cry+002.gif"
+   ]
+  },
+  "desc": ";~; (`*cry*` or `*cries*`)"
+ },
+ "tickle": {
+  "pics": [
+   "https://68.media.tumblr.com/07bd3e63980e22333ebb40b8718524f6/tumblr_ocf8z5BhRG1vpbklao1_500.gif",
+   "https://68.media.tumblr.com/214dc899da412f206ffffc3826227485/tumblr_ocf8z5BhRG1vpbklao2_500.gif",
+   "https://68.media.tumblr.com/6a2dd8c0c73fc5b42f35a6924de351d6/tumblr_ocf8z5BhRG1vpbklao3_500.gif",
+   "https://68.media.tumblr.com/66c210b5eb56e36bff159529493543be/tumblr_ocf8z5BhRG1vpbklao5_r1_500.gif"
+  ],
+  "sources": [
+   "http://otomiya-tickles.tumblr.com/post/149465284293/anime-tickling-is-the-most-adorable-shit-youll"
+  ],
+  "disp": "{{author}} tickles {{target}}",
+  "match": "tickles?",
+  "target_required": true,
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://68.media.tumblr.com/07bd3e63980e22333ebb40b8718524f6/tumblr_ocf8z5BhRG1vpbklao1_500.gif",
+    "https://68.media.tumblr.com/214dc899da412f206ffffc3826227485/tumblr_ocf8z5BhRG1vpbklao2_500.gif",
+    "https://68.media.tumblr.com/6a2dd8c0c73fc5b42f35a6924de351d6/tumblr_ocf8z5BhRG1vpbklao3_500.gif",
+    "https://68.media.tumblr.com/66c210b5eb56e36bff159529493543be/tumblr_ocf8z5BhRG1vpbklao5_r1_500.gif"
+   ],
+   "furry": [
+    [
+     "http://d.facdn.net/art/jojojoshua/1451336913/1451336913.jojojoshua_xmaspose6highrez.png",
+     "http://www.furaffinity.net/view/18633324/",
+     "KwiK"
+    ]
+   ]
+  },
+  "desc": "Hehe ;3 (`*tickle(s)*`)"
+ },
+ "tickle_no_target": {
+  "match": "tickles?",
+  "disp": "{{author}} tickles {{last}}",
+  "parent": "tickle",
+  "target_required": false,
+  "sets": {},
+  "desc": ""
+ },
+ "poke": {
+  "target_required": true,
+  "disp": "{{author}} pokes {{target}}",
+  "match": "pokes?",
+  "pics": [
+   "https://media.discordapp.net/attachments/349885584551968768/361485669476073473/boop9.gif"
+  ],
+  "sources": [],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "https://media.discordapp.net/attachments/349885584551968768/361485669476073473/boop9.gif"
+   ]
+  },
+  "desc": ">poke< you still there? (`*poke(s)*`)"
+ },
+ "poke_no_target": {
+  "visible": false,
+  "parent": "poke",
+  "match": "pokes?",
+  "disp": "{{author}} pokes {{last}}",
+  "target_required": false,
+  "sets": {},
+  "desc": ""
+ },
+ "wake_up": {
+  "match": "wakes? *up",
+  "disp": "{{author}} wakes up",
+  "target_required": -1,
+  "pics": [
+   "http://pa1.narvii.com/5791/0cb241a4e0e93ccfa0186aa692ce03807d58d774_hq.gif",
+   "https://68.media.tumblr.com/be280cca546ee61024b5ff4f3193026b/tumblr_np5yzuihYu1u84acyo1_400.gif"
+  ],
+  "sources": [
+   "http://aminoapps.com/page/anime/6721032/waking-up",
+   "https://www.tumblr.com/tagged/wake-up-girls-gif"
+  ],
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "http://pa1.narvii.com/5791/0cb241a4e0e93ccfa0186aa692ce03807d58d774_hq.gif",
+    "https://68.media.tumblr.com/be280cca546ee61024b5ff4f3193026b/tumblr_np5yzuihYu1u84acyo1_400.gif"
+   ]
+  },
+  "desc": "Nyaws ^~^ (`*wake(s) up*`)"
+ },
+ "sleeping": {
+  "match": "sleeps?|is *sleeping",
+  "disp": "{{author}} sleeps",
+  "pics": [
+   "http://media.tumblr.com/9bf49adde3a82e05bdfa598ac0625b83/tumblr_inline_n97cqioJX61r023wy.gif",
+   "https://zippy.gfycat.com/QuarrelsomeInsistentGroundbeetle.gif"
+  ],
+  "sources": [],
+  "target_required": -1,
+  "visible": true,
+  "sets": {
+   "anime_gif": [
+    "http://media.tumblr.com/9bf49adde3a82e05bdfa598ac0625b83/tumblr_inline_n97cqioJX61r023wy.gif",
+    "https://zippy.gfycat.com/QuarrelsomeInsistentGroundbeetle.gif"
+   ]
+  },
+  "desc": "Zzzz.. (`*sleep(s)*` or `*is sleeping*`)"
+ }
+}
